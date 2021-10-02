@@ -42,7 +42,8 @@ SECRET_KEY = get_secret("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "ec2-3-36-105-228.ap-northeast-2.compute.amazonaws.com"
+    "ec2-3-36-105-228.ap-northeast-2.compute.amazonaws.com",
+    "www.aacfriend.site",
 ]
 
 
