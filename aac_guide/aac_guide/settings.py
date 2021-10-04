@@ -44,6 +44,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "ec2-3-36-105-228.ap-northeast-2.compute.amazonaws.com",
     "www.aacfriend.site",
+    "127.0.0.1",
 ]
 
 
@@ -139,6 +140,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

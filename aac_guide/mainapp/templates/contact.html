@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block static %}
+    <link rel="stylesheet" href="{% static 'contact.css' %}" type="text/css">
+{% endblock %}
+
+
+{% block content %}
+<!-- white background -->
+<div class="section wf-section">
+    <div class="w-container">
+        <div class="section-title-group">
+            <h2 class="section-heading centered">Contact</h2>
+            <!-- <div class="section-subheading center">이 웹사이트를 제작한 개발자에 대한 페이지입니다</div> -->
+        </div>
+        <div data-duration-in="300" data-duration-out="100" class="tabs-wrapper w-tabs">
+            <div class="tab-menu w-tab-menu" style="margin-bottom: 50px;">
+                <a data-w-tab="Tab 1" class="button tab w-inline-block w-tab-link w--current">
+                    <div>개발자</div>
+                </a>
+                <a data-w-tab="Tab 2" class="button tab w-inline-block w-tab-link">
+                    <div>후원</div>
+                </a>
+                <!-- <a data-w-tab="Tab 3" class="button tab w-inline-block w-tab-link">
+                    <div>Tab Button 3</div>
+                </a> -->
+            </div>
+            <div class="w-tab-content">
+                <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active">
+                    <div>
+                        <h3 style='margin-bottom: 30px;'>개발자 페이지</h3>
+                        <p>
+                            <a href='https://github.com/lunar0926' style='text-decoration: none; 
+                            color: inherit;'>Github</a><br>
+                            공부한 내용이나 진행한 프로젝트의 소스코드를 정리한 사이트입니다. 
+                        </p>
+                        <p>
+                            이메일<br>
+                            lunar0926@gmail.com
+                        </p>
+                    </div>
+                </div>
+                <div data-w-tab="Tab 2" class="w-tab-pane">
+                    <div>
+                        <h3 style='margin-bottom: 30px;'>후원</h2>
+                        <p>
+                            카카오뱅크 3333-08-9027039 박재형<br>
+                        </p>
+                    </div>
+                </div>
+                <!-- <div data-w-tab="Tab 3" class="w-tab-pane">
+                    <div>
+                        <img src="https://uploads-ssl.webflow.com/6144ab104a84f6b085d25590/6144ab104a84f60c8fd255e7_5cf8b62b.jpg" sizes="(max-width: 767px) 96vw, (max-width: 991px) 728px, 940px" srcset="https://uploads-ssl.webflow.com/6144ab104a84f6b085d25590/6144ab104a84f60c8fd255e7_5cf8b62b-p-500x333.jpeg 500w, https://uploads-ssl.webflow.com/6144ab104a84f6b085d25590/6144ab104a84f60c8fd255e7_5cf8b62b-p-800x532.jpeg 800w, https://uploads-ssl.webflow.com/6144ab104a84f6b085d25590/6144ab104a84f60c8fd255e7_5cf8b62b-p-1080x718.jpeg 1080w, https://uploads-ssl.webflow.com/6144ab104a84f6b085d25590/6144ab104a84f60c8fd255e7_5cf8b62b.jpg 1300w" alt="" class="fullwidth-image"/>
+                        <h2>Heading</h2>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. <br/>Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. <br/>Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
