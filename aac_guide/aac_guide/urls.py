@@ -14,9 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from mainapp import views
 from django.contrib.auth.views import LoginView,LogoutView
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,5 +29,13 @@ urlpatterns = [
     path('resources/', views.resources, name='resources'),
     path('community/', views.community, name='community'),
     path('contact/', views.contact, name='contact'),
+    path('search/',views.search, name="search"),
+    path('conclusion/', views.conclusion, name='conclusion'),
+    path('thank/', views.thank, name='thank'),
+
+    # Commumity 탭의 기능
+    path('summernote/', include('django_summernote.urls')),
+    path('detail/<int:post_id>', views.detail, name='detail'),
     
-]
+
+]+static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) 

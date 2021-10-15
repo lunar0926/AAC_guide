@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block static %}
+    <link rel="stylesheet" href="{% static 'detail.css' %}" type="text/css">
+{% endblock %}
+
+
+{% block content %}
+<div class="section wf-section">
+    <div class="w-container">
+        <div class="section-title-group">
+            <h2 class="section-heading centered">{{ selected_post.post_title }}</h2>
+            <div class="section-subheading center">{{ selected_post.post_created_at }}</div>
+        </div>
+        
+        <div class="w-row">
+            <p>{{ selected_post.post_content|safe}}</p>
+            {% if selected_post.post_image %}
+                <p><img src="{{ selected_post.post_image.url }}"></p>
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+
+    <!-- <a href='{% url 'community' %}' class="button tab w-inline-block w-tab-link">
+        <div>글 작성하기</div>
+    </a> -->    
+    
+    
+    
+{% endblock %}

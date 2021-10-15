@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block static %}
+    <link rel="stylesheet" href="{% static 'search.css' %}" type="text/css">
+{% endblock %}
+
+
+{% block content %}
+<div class="section wf-section">
+    <div class="w-container">
+        <div class="section-title-group">
+            <h2 class="section-heading centered">게시판</h2>
+            <div class="section-subheading center">AAC와 관련된 이야기를 나눠주세요.</div>
+        </div>
+        {% if not post_list %}
+            <div>
+                <h1>검색 결과 없음~~~</h1>
+            </div>
+        {% else %}
+        {% for post in post_list %}
+            <a href="{% url 'detail' post.id %}" style='text-decoration: none; color:black'><div>제목: {{post.post_title}}</div></a>
+        {% endfor %}
+        {% endif %}
+    </div>
+    <div style="margin-top: 30px;">
+        <form id="nav-search" action="{% url 'search' %}">
+            <input id="search" type="search" placeholder="검색어를 입력해주세요." name="q" value="{{q}}" aria-label="Search" />
+            <button type="submit">검색</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
